@@ -1,0 +1,52 @@
+@import "bower_components/flex-ui-bootstrap/bootstrap";
+
+.alert {
+	border-radius: $base-border-radius;
+	border: 1px solid transparent;
+	margin-bottom: 1em;
+	padding: 1em;
+
+	&--success {
+		background-color: lighten($color-success, 40%);
+		border-color: lighten($color-success, 20%);
+		color: darken($color-success, 10%);
+	}
+
+	&--danger {
+		background-color: lighten($color-danger, 40%);
+		border-color: lighten($color-danger, 20%);
+		color: darken($color-danger, 10%);
+	}
+
+	&--warning {
+		background-color: lighten($color-warning, 40%);
+		border-color: lighten($color-warning, 20%);
+		color: darken($color-warning, 10%);
+	}
+
+	&--info {
+		background-color: lighten($color-primary, 40%);
+		border-color: lighten($color-primary, 20%);
+		color: darken($color-primary, 10%);
+	}
+
+	&--closable {
+		position: relative;
+	}
+
+	&__close {
+		color: rgba(black, 0.2);
+		font-size: rem(11px);
+		position: absolute;
+		right: 1em;
+
+		&:hover {
+			color: rgba(black, 0.5);
+		}
+	}
+
+	&__icon {
+		position: relative;
+		top: -1px;
+	}
+}
