@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+
+	<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="alert.css" />
+
+	<style>
+		body {
+			font-family: 'Arial', sans-serif;
+			font-size: 12px;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="alert alert--warning" role="alert">
+		<a href="#" class="alert__close"><i class="alert__icon fa fa-times"></i></a> <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+	</div>
+	<!-- /.alert -->
+
+	<script src="bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="alert.js"></script>
+
+	<script>
+		$('.alert')
+				.alert('remove')
+				.on('close', function () {
+					console.log('close!');
+				})
+				.on('closed', function () {
+					console.log('closed!');
+				});
+	</script>
+</body>
+</html>

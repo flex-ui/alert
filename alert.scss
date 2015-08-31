@@ -1,39 +1,42 @@
 @import "bower_components/flex-ui-bootstrap/bootstrap";
 
+// .alert
 .alert {
 	border-radius: $base-border-radius;
 	border: 1px solid transparent;
 	margin-bottom: 1em;
+	position: relative;
 	padding: 1em;
 
+	// .alert--success
 	&--success {
 		background-color: lighten($color-success, 40%);
 		border-color: lighten($color-success, 20%);
 		color: darken($color-success, 10%);
 	}
 
+	// .alert--danger
 	&--danger {
 		background-color: lighten($color-danger, 40%);
 		border-color: lighten($color-danger, 20%);
 		color: darken($color-danger, 10%);
 	}
 
+	// .alert--warning
 	&--warning {
 		background-color: lighten($color-warning, 40%);
 		border-color: lighten($color-warning, 20%);
 		color: darken($color-warning, 10%);
 	}
 
+	// .alert--info
 	&--info {
 		background-color: lighten($color-primary, 40%);
 		border-color: lighten($color-primary, 20%);
 		color: darken($color-primary, 10%);
 	}
 
-	&--closable {
-		position: relative;
-	}
-
+	// .alert__close
 	&__close {
 		color: rgba(black, 0.2);
 		font-size: rem(11px);
@@ -45,6 +48,7 @@
 		}
 	}
 
+	// .alert__icon
 	&__icon {
 		position: relative;
 		top: -1px;
