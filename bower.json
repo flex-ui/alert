@@ -1,23 +1,29 @@
 {
   "name": "flex-ui-alert",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "homepage": "https://github.com/flex-ui/alert",
   "authors": [
-  	"Lado Lomidze <lado.lomidze@gmail.com>",
-  	"Zura Gabievi <zura.gabievi@gmail.com>"
+    "Lado Lomidze <lado.lomidze@gmail.com>",
+    "Zura Gabievi <zura.gabievi@gmail.com>"
   ],
   "main": [
-  	"alert.css"
-  	],
+    "alert.css"
+  ],
   "license": "MIT",
   "ignore": [
-  	"**/.*",
-  	"node_modules",
-  	"bower_components",
-  	"test",
-  	"tests"
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
   ],
   "devDependencies": {
-  	"flex-ui-bootstrap": "*"
+    "bem": "~0.2.3",
+    "flex-ui-bootstrap": "*"
+  },
+  "dependencies": {
+    "bem": "~0.2.3",
+    "font-awesome": "fontawesome#~4.4.0",
+    "jquery": "~2.1.4"
   }
 }

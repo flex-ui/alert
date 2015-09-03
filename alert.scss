@@ -1,55 +1,49 @@
 @import "bower_components/flex-ui-bootstrap/bootstrap";
+@import "bower_components/bem/scss/bem";
 
-// .alert
-.alert {
+@include b(alert) {
 	border-radius: $base-border-radius;
 	border: 1px solid transparent;
 	margin-bottom: 1em;
 	position: relative;
 	padding: 1em;
 
-	// .alert--success
-	&--success {
+	@include m(success) {
 		background-color: lighten($color-success, 40%);
 		border-color: lighten($color-success, 20%);
 		color: darken($color-success, 10%);
 	}
 
-	// .alert--danger
-	&--danger {
+	@include m(danger) {
 		background-color: lighten($color-danger, 40%);
 		border-color: lighten($color-danger, 20%);
 		color: darken($color-danger, 10%);
 	}
 
-	// .alert--warning
-	&--warning {
+	@include m(warning) {
 		background-color: lighten($color-warning, 40%);
 		border-color: lighten($color-warning, 20%);
 		color: darken($color-warning, 10%);
 	}
 
-	// .alert--info
-	&--info {
+	@include m(info) {
 		background-color: lighten($color-primary, 40%);
 		border-color: lighten($color-primary, 20%);
 		color: darken($color-primary, 10%);
 	}
 
-	// .alert__close
-	&__close {
+	@include e(close) {
 		color: rgba(black, 0.2);
 		font-size: rem(11px);
 		position: absolute;
 		right: 1em;
 
-		&:hover {
+		@include hover {
 			color: rgba(black, 0.5);
 		}
 	}
 
-	// .alert__icon
-	&__icon {
+	@include e(icon) {
 		position: relative;
 		top: -1px;
 	}
