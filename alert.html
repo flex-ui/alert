@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+
+	<title>Flex UI Alert Component</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700" />
+
+	<link rel="stylesheet" href="alert.css" />
+
+	<style>
+		.container {
+			margin: 2em auto;
+			max-width: 48em;
+			padding: 0 1em;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		<div class="alert" role="alert">
+			<p><strong>Default!</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima, tenetur?</p>
+		</div>
+		<!-- /.alert -->
+
+		<div class="alert alert--primary" role="alert">
+			<p><strong>Primary!</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, sed.</p>
+		</div>
+		<!-- /.alert -->
+
+		<div class="alert alert--success" role="alert">
+			<p><strong>Success!</strong> Accusantium architecto, commodi cum distinctio earum in quae temporibus vel?</p>
+		</div>
+		<!-- /.alert -->
+
+		<div class="alert alert--danger" role="alert">
+			<p><strong>Danger!</strong> Blanditiis dignissimos eos in perspiciatis quia quidem tempora voluptatem! Officia.</p>
+		</div>
+		<!-- /.alert -->
+
+		<div class="alert alert--warning" role="alert">
+			<p><strong>Warning!</strong> A beatae commodi earum esse labore molestias, nihil nobis reprehenderit?</p>
+		</div>
+		<!-- /.alert -->
+
+		<div class="alert alert--inverse" role="alert">
+			<p><strong>Inverse!</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, maxime?</p>
+		</div>
+		<!-- /.alert -->
+
+		<div class="alert alert--danger alert--rounded" role="alert">
+			<p><strong>Rounded!</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, totam?</p>
+		</div>
+		<!-- /.alert -->
+
+		<div class="alert alert--success" role="alert">
+			<p><strong>Dismissible!</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, totam?</p>
+			<a href="#" class="alert__close"><i class="alert__icon fa fa-times"></i></a>
+		</div>
+		<!-- /.alert -->
+
+		<small>// check console to see alert closing events</small>
+	</div>
+	<!-- /.container -->
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+	<script src="alert.js"></script>
+
+	<script>
+		$('.alert').alert(true)
+				.on('close', function (alert) {
+					console.log('Alert is about to close!', alert);
+				})
+				.on('closed', function (alert) {
+					console.log('Finished closing alert!', alert);
+				});
+	</script>
+</body>
+</html>

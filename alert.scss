@@ -2,14 +2,25 @@
 @import "bower_components/bem/scss/bem";
 
 @include b(alert) {
-	border-radius: $base-border-radius;
-	border: 1px solid transparent;
+	background-color: lighten($color-light, 8%);
+	border: 1px solid lighten($color-light, 2%);
+	color: darken($color-light, 10%);
 	margin-bottom: 1em;
 	position: relative;
-	padding: 1em;
+	padding: 0.5em 1em;
+
+	@include m(rounded) {
+		border-radius: $base-border-radius;
+	}
+
+	@include m(primary) {
+		background-color: lighten($color-primary, 40%);
+		border-color: lighten($color-primary, 20%);
+		color: darken($color-primary, 10%);
+	}
 
 	@include m(success) {
-		background-color: lighten($color-success, 40%);
+		background-color: lighten($color-success, 35%);
 		border-color: lighten($color-success, 20%);
 		color: darken($color-success, 10%);
 	}
@@ -26,17 +37,22 @@
 		color: darken($color-warning, 10%);
 	}
 
-	@include m(info) {
-		background-color: lighten($color-primary, 40%);
-		border-color: lighten($color-primary, 20%);
-		color: darken($color-primary, 10%);
+	@include m(inverse) {
+		background-color: lighten($color-inverse, 40%);
+		border-color: lighten($color-inverse, 20%);
+		color: darken($color-inverse, 10%);
 	}
 
 	@include e(close) {
 		color: rgba(black, 0.2);
 		font-size: rem(11px);
 		position: absolute;
+		margin: auto 0;
+		height: 15px;
+		width: 15px;
 		right: 1em;
+		bottom: 0;
+		top: 0;
 
 		@include hover {
 			color: rgba(black, 0.5);
