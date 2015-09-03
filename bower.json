@@ -17,13 +17,8 @@
     "test",
     "tests"
   ],
-  "devDependencies": {
-    "bem": "~0.2.3",
-    "flex-ui-bootstrap": "*"
-  },
   "dependencies": {
-    "bem": "~0.2.3",
-    "font-awesome": "fontawesome#~4.4.0",
+    "flex-ui-bootstrap": "~0.1.0",
     "jquery": "~2.1.4"
   }
 }
