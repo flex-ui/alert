@@ -1,5 +1,5 @@
-@import "bower_components/flex-ui-bootstrap/bootstrap";
-@import "bower_components/bem/scss/bem";
+@import "/bower_components/flex-ui-bootstrap/bootstrap";
+@import "/bower_components/bem/scss/bem";
 
 @include b(alert) {
 	background-color: lighten($color-light, 8%);
