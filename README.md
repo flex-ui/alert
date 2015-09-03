@@ -11,7 +11,7 @@ $ bower install flex-ui-alert --save
 ```
 ### Install Manualy
 - [Download Package Archive](https://github.com/flex-ui/alert/archive/master.zip)
-- Place `/scss/` or `/sass/` directory to your project.
+- Place files to your project.
 
 ## Usage
 Insert following code in top of your file:
