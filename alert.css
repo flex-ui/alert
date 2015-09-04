@@ -1,12 +1,10 @@
 .alert {
-  background-color: #fcf8ec;
-  border: 1px solid #f8edd1;
-  color: #f1d99b;
+  background-color: white;
+  border: 1px solid #fafafa;
+  color: gainsboro;
   margin-bottom: 1em;
   position: relative;
   padding: 0.5em 1em; }
-  .alert--rounded {
-    border-radius: 3px; }
   .alert--primary {
     background-color: #dcf2fb;
     border-color: #82ceef;
@@ -27,20 +25,68 @@
     background-color: #8b9da1;
     border-color: #59696d;
     color: #141819; }
+  .alert--rounded {
+    border-radius: 3px; }
+  .alert--compact {
+    display: inline-block; }
+  .alert--floating {
+    position: absolute;
+    max-width: 300px; }
+    .alert--floating.alert--top-left {
+      left: 1em;
+      top: 1em; }
+    .alert--floating.alert--top-right {
+      right: 1em;
+      top: 1em; }
+    .alert--floating.alert--bottom-left {
+      bottom: 1em;
+      left: 1em; }
+    .alert--floating.alert--bottom-right {
+      bottom: 1em;
+      right: 1em; }
   .alert__close {
+    border-bottom: 1px solid #fafafa;
+    border-left: 1px solid #fafafa;
+    background-color: white;
     color: rgba(0, 0, 0, 0.2);
     font-size: 0.91667rem;
     position: absolute;
-    margin: auto 0;
-    height: 15px;
-    width: 15px;
-    right: 1em;
-    bottom: 0;
+    text-align: center;
+    line-height: 20px;
+    height: 20px;
+    width: 20px;
+    right: 0;
     top: 0; }
+    .alert--primary .alert__close {
+      border-bottom: 1px solid #82ceef;
+      border-left: 1px solid #82ceef;
+      background-color: #afe0f5; }
+    .alert--success .alert__close {
+      border-bottom: 1px solid #74ebc2;
+      border-left: 1px solid #74ebc2;
+      background-color: #a0f2d6; }
+    .alert--danger .alert__close {
+      border-bottom: 1px solid #ea8a91;
+      border-left: 1px solid #ea8a91;
+      background-color: #f2b5ba; }
+    .alert--warning .alert__close {
+      border-bottom: 1px solid #f1d477;
+      border-left: 1px solid #f1d477;
+      background-color: #f6e3a5; }
+    .alert--inverse .alert__close {
+      border-bottom: 1px solid #59696d;
+      border-left: 1px solid #59696d;
+      background-color: #708489; }
+    .alert__close .alert__icon {
+      font-size: 1rem;
+      position: relative;
+      margin: 0;
+      top: -1px; }
     .alert__close:hover {
       color: rgba(0, 0, 0, 0.5); }
   .alert__icon {
-    position: relative;
-    top: -1px; }
+    margin: 0 0.5em 0 0.2em;
+    vertical-align: middle;
+    font-size: 2.33333rem; }
 
 /*# sourceMappingURL=alert.css.map */

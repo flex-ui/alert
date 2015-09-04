@@ -1,5 +1,5 @@
-@import "/bower_components/flex-ui-bootstrap/bootstrap";
-@import "/bower_components/bem/scss/bem";
+@import "bower_components/flex-ui-bootstrap/bootstrap";
+@import "bower_components/bem/scss/bem";
 
 @include b(alert) {
 	background-color: lighten($color-light, 8%);
@@ -8,10 +8,6 @@
 	margin-bottom: 1em;
 	position: relative;
 	padding: 0.5em 1em;
-
-	@include m(rounded) {
-		border-radius: $base-border-radius;
-	}
 
 	@include m(primary) {
 		background-color: lighten($color-primary, 40%);
@@ -43,16 +39,89 @@
 		color: darken($color-inverse, 10%);
 	}
 
+	@include m(rounded) {
+		border-radius: $base-border-radius;
+	}
+
+	@include m(compact) {
+		display: inline-block;
+	}
+
+	@include m(floating) {
+		position: absolute;
+		max-width: 300px;
+
+		@include while(top-left) {
+			left: 1em;
+			top: 1em;
+		}
+
+		@include while(top-right) {
+			right: 1em;
+			top: 1em;
+		}
+
+		@include while(bottom-left) {
+			bottom: 1em;
+			left: 1em;
+		}
+
+		@include while(bottom-right) {
+			bottom: 1em;
+			right: 1em;
+		}
+	}
+
 	@include e(close) {
+		border-bottom: 1px solid lighten($color-light, 2%);
+		border-left: 1px solid lighten($color-light, 2%);
+		background-color: lighten($color-light, 4%);
 		color: rgba(black, 0.2);
 		font-size: rem(11px);
 		position: absolute;
-		margin: auto 0;
-		height: 15px;
-		width: 15px;
-		right: 1em;
-		bottom: 0;
+		text-align: center;
+		line-height: 20px;
+		height: 20px;
+		width: 20px;
+		right: 0;
 		top: 0;
+
+		@include at(primary) {
+			border-bottom: 1px solid lighten($color-primary, 20%);
+			border-left: 1px solid lighten($color-primary, 20%);
+			background-color: lighten($color-primary, 30%);
+		}
+
+		@include at(success) {
+			border-bottom: 1px solid lighten($color-success, 20%);
+			border-left: 1px solid lighten($color-success, 20%);
+			background-color: lighten($color-success, 30%);
+		}
+
+		@include at(danger) {
+			border-bottom: 1px solid lighten($color-danger, 20%);
+			border-left: 1px solid lighten($color-danger, 20%);
+			background-color: lighten($color-danger, 30%);
+		}
+
+		@include at(warning) {
+			border-bottom: 1px solid lighten($color-warning, 20%);
+			border-left: 1px solid lighten($color-warning, 20%);
+			background-color: lighten($color-warning, 30%);
+		}
+
+		@include at(inverse) {
+			border-bottom: 1px solid lighten($color-inverse, 20%);
+			border-left: 1px solid lighten($color-inverse, 20%);
+			background-color: lighten($color-inverse, 30%);
+		}
+
+		@include e(icon) {
+			font-size: rem(12px);
+			position: relative;
+			margin: 0;
+			top: -1px;
+		}
 
 		@include hover {
 			color: rgba(black, 0.5);
@@ -60,7 +129,8 @@
 	}
 
 	@include e(icon) {
-		position: relative;
-		top: -1px;
+		margin: 0 0.5em 0 0.2em;
+		vertical-align: middle;
+		font-size: rem(28px);
 	}
 }
